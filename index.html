@@ -28,7 +28,6 @@
             position: relative;
         }
 
-        /* Subtle animated background */
         .bg-hearts {
             position: fixed;
             top: 0;
@@ -52,19 +51,14 @@
                 transform: translateY(0) translateX(0);
                 opacity: 0;
             }
-            10% {
-                opacity: 0.1;
-            }
-            90% {
-                opacity: 0.1;
-            }
+            10% { opacity: 0.1; }
+            90% { opacity: 0.1; }
             100% {
                 transform: translateY(-100vh) translateX(50px);
                 opacity: 0;
             }
         }
 
-        /* Container */
         .container {
             position: relative;
             z-index: 10;
@@ -77,7 +71,6 @@
             justify-content: center;
         }
 
-        /* Header */
         .header {
             text-align: center;
             margin-bottom: 60px;
@@ -85,14 +78,8 @@
         }
 
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .header h1 {
@@ -112,7 +99,6 @@
             font-weight: 300;
         }
 
-        /* Main Card */
         .card {
             background: white;
             border-radius: 15px;
@@ -123,17 +109,10 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Photo Section */
         .photo-section {
             text-align: center;
             margin-bottom: 40px;
@@ -148,7 +127,6 @@
             padding: 8px;
             background: linear-gradient(135deg, var(--rose-red), var(--deep-burgundy));
             box-shadow: 0 8px 30px rgba(196, 30, 58, 0.3);
-            position: relative;
         }
 
         .photo-inner {
@@ -157,9 +135,6 @@
             border-radius: 50%;
             overflow: hidden;
             background: var(--cream);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border: 3px solid white;
         }
 
@@ -167,47 +142,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: none;
-        }
-
-        .photo-img.active {
             display: block;
-        }
-
-        .photo-placeholder {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            color: var(--rose-red);
-            text-align: center;
-            padding: 20px;
-        }
-
-        .upload-section {
-            margin-top: 20px;
-        }
-
-        .upload-label {
-            display: inline-block;
-            background: var(--rose-red);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
-        }
-
-        .upload-label:hover {
-            background: var(--deep-burgundy);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
-        }
-
-        .upload-input {
-            display: none;
         }
 
         .photo-caption {
@@ -218,7 +153,6 @@
             margin-top: 15px;
         }
 
-        /* Message Section */
         .message-section {
             text-align: center;
             padding: 30px 0;
@@ -254,10 +188,8 @@
             text-align: right;
         }
 
-        /* Love Notes */
         .love-notes {
             display: grid;
-            grid-template-columns: 1fr;
             gap: 20px;
             margin-top: 40px;
         }
@@ -272,25 +204,8 @@
             font-style: italic;
             color: #444;
             line-height: 1.7;
-            animation: slideIn 1s ease both;
         }
 
-        .note:nth-child(1) { animation-delay: 0.6s; }
-        .note:nth-child(2) { animation-delay: 0.8s; }
-        .note:nth-child(3) { animation-delay: 1s; }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Footer */
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -305,12 +220,8 @@
         }
 
         @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.15);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
         }
 
         .footer-text {
@@ -320,7 +231,6 @@
             margin-top: 10px;
         }
 
-        /* Music Toggle */
         .music-toggle {
             position: fixed;
             bottom: 30px;
@@ -339,317 +249,94 @@
             box-shadow: 0 4px 15px rgba(196, 30, 58, 0.2);
             z-index: 100;
         }
-
-        .music-toggle:hover {
-            background: var(--rose-red);
-            transform: scale(1.1);
-        }
-
-        .music-toggle:hover .music-icon {
-            filter: brightness(0) invert(1);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
-
-            .header .subtitle {
-                font-size: 1.3rem;
-            }
-
-            .card {
-                padding: 30px 25px;
-            }
-
-            .photo-frame {
-                width: 220px;
-                height: 220px;
-            }
-
-            .message-text {
-                font-size: 1.15rem;
-            }
-
-            .message-title {
-                font-size: 1.6rem;
-            }
-
-            .note {
-                font-size: 1.1rem;
-                padding: 20px;
-            }
-
-            .music-toggle {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-            }
-        }
-
-        /* Decorative elements */
-        .decorative-line {
-            width: 60px;
-            height: 2px;
-            background: var(--gold);
-            margin: 20px auto;
-        }
-
-        /* Edit mode styles */
-        .edit-mode-banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: var(--rose-red);
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        .save-image-btn {
-            display: inline-block;
-            background: white;
-            color: var(--rose-red);
-            padding: 8px 20px;
-            border-radius: 20px;
-            margin-left: 15px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            border: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .save-image-btn:hover {
-            background: var(--cream);
-            transform: scale(1.05);
-        }
-
-        .instructions {
-            background: rgba(196, 30, 58, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border-left: 4px solid var(--rose-red);
-        }
-
-        .instructions h3 {
-            font-family: 'Cormorant Garamond', serif;
-            color: var(--deep-burgundy);
-            margin-bottom: 10px;
-        }
-
-        .instructions p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .instructions ol {
-            margin-left: 20px;
-            margin-top: 10px;
-            color: #555;
-        }
-
-        .instructions li {
-            margin-bottom: 8px;
-        }
     </style>
 </head>
 <body>
-    <!-- Background Hearts -->
-    <div class="bg-hearts" id="bgHearts"></div>
 
-    <!-- Edit Mode Banner (remove after uploading image) -->
-    <div class="edit-mode-banner" id="editBanner">
-        📝 Setup Mode: Upload Omotola's image, then remove this banner before sharing
-        <button class="save-image-btn" onclick="removeEditMode()">Done - Hide This Banner</button>
+<div class="bg-hearts" id="bgHearts"></div>
+
+<div class="music-toggle" id="musicToggle">
+    <span class="music-icon">🎵</span>
+</div>
+
+<div class="container">
+    <div class="header">
+        <h1>Happy Valentine's Day</h1>
+        <div class="subtitle">Omotola</div>
     </div>
 
-    <!-- Music Toggle -->
-    <div class="music-toggle" id="musicToggle">
-        <span class="music-icon">🎵</span>
-    </div>
+    <div class="card">
 
-    <!-- Main Container -->
-    <div class="container">
-        <div class="header">
-            <h1>Happy Valentine's Day</h1>
-            <div class="subtitle">Omotola</div>
+        <div class="photo-section">
+            <div class="photo-frame">
+                <div class="photo-inner">
+                    <img src="omotola.jpg" alt="Omotola" class="photo-img">
+                </div>
+            </div>
+            <p class="photo-caption">My favorite smile in the universe</p>
         </div>
 
-        <div class="card">
-            <!-- Instructions (shown initially) -->
-            <div class="instructions" id="instructions">
-                <h3>💝 How to Personalize This Card:</h3>
-                <ol>
-                    <li>Click "Upload Photo" below to add Omotola's picture</li>
-                    <li>Once the image is uploaded, click "Done - Hide This Banner" at the top</li>
-                    <li>Save this page (Ctrl+S / Cmd+S) or share the URL</li>
-                    <li>The image will be permanently embedded in the page!</li>
-                </ol>
-            </div>
-
-            <!-- Photo Section -->
-            <div class="photo-section">
-                <div class="photo-frame">
-                    <div class="photo-inner">
-                        <div class="photo-placeholder" id="placeholder">
-                            Upload Omotola's Photo ✨
-                        </div>
-                        <img id="photoImg" class="photo-img" alt="Omotola">
-                    </div>
-                </div>
-                
-                <div class="upload-section">
-                    <label for="uploadInput" class="upload-label">
-                        📸 Upload Photo
-                    </label>
-                    <input type="file" id="uploadInput" class="upload-input" accept="image/*">
-                </div>
-                
-                <div class="decorative-line"></div>
-                <p class="photo-caption">My favorite smile in the universe</p>
-            </div>
-
-            <!-- Message Section -->
-            <div class="message-section">
-                <h2 class="message-title">To My Dearest Omotola</h2>
-                <p class="message-text">
-                    You are my sunshine, my happiness, and my favorite person in the world. 
-                    Every moment with you feels magical, every day brighter because you're in it.
-                    <br><br>
-                    Your smile lights up my world, your laughter is my favorite sound, 
-                    and your love is the greatest gift I could ever receive.
-                    <br><br>
-                    Happy Valentine's Day, my love. Here's to forever with you.
-                </p>
-                <div class="signature">Forever Yours 💕</div>
-            </div>
-
-            <!-- Love Notes -->
-            <div class="love-notes">
-                <div class="note">
-                    "In all the world, there is no heart for me like yours. 
-                    In all the world, there is no love for you like mine."
-                </div>
-                <div class="note">
-                    "You are my today and all of my tomorrows, 
-                    my sunshine on the cloudiest days."
-                </div>
-                <div class="note">
-                    "Every love story is beautiful, but ours is my favorite."
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <div class="footer">
-                <div class="heart-icon">💖</div>
-                <p class="footer-text">Valentine's Day 2026</p>
-            </div>
+        <div class="message-section">
+            <h2 class="message-title">To My Dearest Omotola</h2>
+            <p class="message-text">
+                You are my sunshine, my happiness, and my favorite person in the world. 
+                Every moment with you feels magical, every day brighter because you're in it.
+                <br><br>
+                Your smile lights up my world, your laughter is my favorite sound, 
+                and your love is the greatest gift I could ever receive.
+                <br><br>
+                Happy Valentine's Day, my love. Here's to forever with you.
+            </p>
+            <div class="signature">Forever Yours 💕</div>
         </div>
+
+        <div class="love-notes">
+            <div class="note">"In all the world, there is no heart for me like yours."</div>
+            <div class="note">"You are my today and all of my tomorrows."</div>
+            <div class="note">"Every love story is beautiful, but ours is my favorite."</div>
+        </div>
+
+        <div class="footer">
+            <div class="heart-icon">💖</div>
+            <p class="footer-text">Valentine's Day 2026</p>
+        </div>
+
     </div>
+</div>
 
-    <!-- Audio -->
-    <audio id="bgMusic" loop>
-        <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_4e3f5d21f5.mp3" type="audio/mpeg">
-    </audio>
+<audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_4e3f5d21f5.mp3" type="audio/mpeg">
+</audio>
 
-    <script>
-        // Background Hearts
-        const bgHearts = document.getElementById('bgHearts');
-        function createBgHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'bg-heart';
-            heart.textContent = '❤️';
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.top = '100%';
-            heart.style.animationDuration = (Math.random() * 10 + 15) + 's';
-            heart.style.animationDelay = Math.random() * 5 + 's';
-            bgHearts.appendChild(heart);
+<script>
+const bgHearts = document.getElementById('bgHearts');
+function createBgHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'bg-heart';
+    heart.textContent = '❤️';
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.top = '100%';
+    heart.style.animationDuration = (Math.random() * 10 + 15) + 's';
+    bgHearts.appendChild(heart);
+    setTimeout(() => heart.remove(), 25000);
+}
+setInterval(createBgHeart, 3000);
 
-            setTimeout(() => heart.remove(), 25000);
-        }
+const musicToggle = document.getElementById('musicToggle');
+const bgMusic = document.getElementById('bgMusic');
+let isPlaying = false;
+musicToggle.addEventListener('click', () => {
+    if (isPlaying) {
+        bgMusic.pause();
+        musicToggle.querySelector('.music-icon').textContent = '🎵';
+        isPlaying = false;
+    } else {
+        bgMusic.play();
+        musicToggle.querySelector('.music-icon').textContent = '🔇';
+        isPlaying = true;
+    }
+});
+</script>
 
-        setInterval(createBgHeart, 3000);
-        for(let i = 0; i < 8; i++) {
-            setTimeout(createBgHeart, i * 500);
-        }
-
-        // Music Toggle
-        const musicToggle = document.getElementById('musicToggle');
-        const bgMusic = document.getElementById('bgMusic');
-        let isPlaying = false;
-
-        musicToggle.addEventListener('click', () => {
-            if (isPlaying) {
-                bgMusic.pause();
-                musicToggle.querySelector('.music-icon').textContent = '🎵';
-                isPlaying = false;
-            } else {
-                bgMusic.play();
-                musicToggle.querySelector('.music-icon').textContent = '🔇';
-                isPlaying = true;
-            }
-        });
-
-        // Photo Upload
-        const uploadInput = document.getElementById('uploadInput');
-        const photoImg = document.getElementById('photoImg');
-        const placeholder = document.getElementById('placeholder');
-        const instructions = document.getElementById('instructions');
-
-        uploadInput.addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    photoImg.src = event.target.result;
-                    photoImg.classList.add('active');
-                    placeholder.style.display = 'none';
-                    
-                    // Store in localStorage so it persists
-                    localStorage.setItem('omotolaPhoto', event.target.result);
-                    
-                    // Hide instructions after upload
-                    setTimeout(() => {
-                        instructions.style.display = 'none';
-                    }, 1000);
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-
-        // Load saved image on page load
-        window.addEventListener('load', () => {
-            const savedPhoto = localStorage.getItem('omotolaPhoto');
-            if (savedPhoto) {
-                photoImg.src = savedPhoto;
-                photoImg.classList.add('active');
-                placeholder.style.display = 'none';
-                instructions.style.display = 'none';
-            }
-        });
-
-        // Remove Edit Mode
-        function removeEditMode() {
-            const banner = document.getElementById('editBanner');
-            banner.style.display = 'none';
-            localStorage.setItem('editModeHidden', 'true');
-        }
-
-        // Check if edit mode should be hidden
-        window.addEventListener('load', () => {
-            if (localStorage.getItem('editModeHidden') === 'true') {
-                document.getElementById('editBanner').style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>
